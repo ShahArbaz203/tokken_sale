@@ -6,7 +6,7 @@ contract DappToken{
     //set the total number of token
     //Read the total number of token
 
-    uint256 public totalSupply;
+    uint256 public totalSupply=1000000 ;
     
     function dappToken() public{
         totalSupply = 1000000;

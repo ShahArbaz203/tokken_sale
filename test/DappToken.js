@@ -6,7 +6,7 @@ contract('DappToken', function (accounts) {
             // We can only return one thins
             return tokenInstance.totalSupply();
         }).then(function (totalSupply) {
-            assert.equal(totalSupply.toNumber(), 1000000, 'sets the total Supply to 1,000,000')
+            assert.equal(totalSupply.toNumber(), 1000000, 'sets the total Supply to 1000000')
         })
 
     });
