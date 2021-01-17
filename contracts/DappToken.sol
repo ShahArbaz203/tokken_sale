@@ -6,10 +6,14 @@ contract DappToken{
     //set the total number of token
     //Read the total number of token
 
-    uint256 public totalSupply=1000000 ;
+    mapping(address => uint256) public balanceOf;
+
+    uint256 public totalSupply;
     
-    function dappToken() public{
-        totalSupply = 1000000;
+    constructor (uint256 _initialSupply){
+        balanceOf[msg.sender] = _initialSupply;
+        totalSupply = _initialSupply;
+        //allocate the initial supply
     }
 
 }
