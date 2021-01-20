@@ -68,4 +68,16 @@ uint256 indexed _value
        
    }
    //thansfer from
+   function transferFrom(address _from, address  _to, uint256 _value) public returns (bool ){
+       
+
+       require(_value <= balanceOf[_from]);
+       //Require _from has enogh tokens
+       // Require the allowance is big enogh
+       //change the balance
+       // Update the allowance
+       // Transfer Event
+       //return a boolean
+
+   }
 }
