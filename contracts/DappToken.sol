@@ -72,12 +72,19 @@ uint256 indexed _value
        
 
        require(_value <= balanceOf[_from]);
+       require(_value <= allowance[_from][msg.sender]);
        //Require _from has enogh tokens
        // Require the allowance is big enogh
        //change the balance
+       balanceOf[_from] -= _value;
+       balanceOf[_to] += _value;
+
+       allowance[_from][msg.sender] -= _value;
        // Update the allowance
+       Transfer(_from, _to, _value);
        // Transfer Event
        //return a boolean
+       return true;
 
    }
 }
