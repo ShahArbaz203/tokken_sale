@@ -37,3 +37,4 @@ contract BCCToken{
         emit Transfer(from,to,amount);
     }
 }
+
